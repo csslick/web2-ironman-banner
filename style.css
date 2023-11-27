@@ -1,0 +1,45 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+a {
+    text-decoration: none;
+}
+
+.banner {
+    /* 부모 위치 선언 */
+    position: relative;
+    border: 1px solid #ccc;
+    display: block;
+    width: 600px;
+    height: 176px;
+
+    /* 배경 이미지 레이어링 */
+    background-image: 
+        url('./images/Iron-Man176\ 1.png'),
+        url('./images/Tank.gif');
+    background-repeat: no-repeat, no-repeat;
+
+    /* 첫번째 배경위치 0 0, 두번째 배경 위치 right top */
+    background-position: 0 0, right top; 
+    
+    /* 2번째 이미지의 크기를 조정(자동 채움) */
+    background-size: auto, cover;
+}
+
+.banner .logo {
+    position: absolute;
+    left: 201px;
+    top: 33px;
+
+}
