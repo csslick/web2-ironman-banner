@@ -35,11 +35,35 @@ a {
     
     /* 2번째 이미지의 크기를 조정(자동 채움) */
     background-size: auto, cover;
+
+    /* 바깥 영역 가려주기(clipping 처리) */
+    overflow: hidden;
 }
 
 .banner .logo {
     position: absolute;
     left: 201px;
-    top: 33px;
+    /* top: 33px; */
+    top: -177px;
 
+    /* 애니메이션 속성 */
+    animation-name: banner;
+    animation-duration: 0.4s;
+
+    /* 재생 종료시 끝난 위치에서 정지 */
+    animation-fill-mode: forwards;
+
+    /* 애니메이션 2초 기다리고 시작하기 */
+    animation-delay: 2s;
 }
+
+@keyframes banner {
+    0% {
+        top: -177px;
+    }
+
+    100% {
+        top: 33px;
+    }
+}
+
